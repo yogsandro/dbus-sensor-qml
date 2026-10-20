@@ -1,0 +1,20 @@
+[Unit]
+Description=Temperature QML client Service
+After=dbus.service
+
+[Service]
+Type=simple
+BusName=com.example.qml-client
+ExecStart=/usr/bin/qml-temperature-sensor-app
+Environment=QT_QPA_PLATFORM=eglfs
+Restart=on-failure
+RestartSec=2
+Environment=XDG_RUNTIME_DIR=/run/qml-temperature-sensor-app
+ExecStartPre=/usr/bin/mkdir -p /qml-temperature-sensor-app
+ExecStartPre=/usr/bin/chmod 0700 /qml-temperature-sensor-app
+Environment=LANG=C.UTF-8
+Environment=LC_ALL=C.UTF-8
+
+
+[Install]
+WantedBy=multi-user.target
