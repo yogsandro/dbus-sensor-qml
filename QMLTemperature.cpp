@@ -147,7 +147,7 @@ start(void) {
 	loop = g_main_loop_new(NULL, FALSE);
 
 	proxy = example_com_example_echo_proxy_new_for_bus_sync(
-		G_BUS_TYPE_SESSION,
+		G_BUS_TYPE_SYSTEM,
 		G_DBUS_PROXY_FLAGS_NONE,
 		"com.example.Echo",
 		"/com/example/Echo",
