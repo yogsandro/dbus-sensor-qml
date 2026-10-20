@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<node>
+  <interface name="com.example.Echo">
+   	<property name='Temperature' type='d' access='read'/>
+   	<property name='Timestamp' type='t' access='read'/>
+   	<property name="ReadingAvailable" type="b" access="read"/>
+    <method name="Hello">
+      <arg name="name" type="s" direction="in"/>
+      <arg name="reply" type="s" direction="out"/>
+    </method>
+    <method name="Add">
+      <arg name="a" type="i" direction="in"/>
+      <arg name="b" type="i" direction="in"/>
+      <arg name="reply" type="i" direction="out"/>
+    </method>
+    <signal name='ValuesChanged'>"
+    	<arg name='temperature' type='d'/>
+    </signal>
+    <signal name='TemperatureChanged'>"
+    	<arg name='temperature' type='d'/>
+    	<arg name='timestamp' type='t'/>
+    </signal>
+    
+  </interface>
+</node>

@@ -1,0 +1,2 @@
+#define QMLTemperature_VERSION_MAJOR @QMLTemperature_VERSION_MAJOR@
+#define QMLTemperature_VERSION_MINOR @QMLTemperature_VERSION_MINOR@
